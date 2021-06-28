@@ -1,0 +1,73 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Wilde2007}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b4ae6464896bf5ac3c38da3401d9bf1f}{%
+           family={Wilde},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b7024ad91d26df00a73444c3028e564}{%
+           family={Hess},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4965839d1a1cb5d8e94e9a4a16ad6ab9}
+      \strng{fullhash}{4965839d1a1cb5d8e94e9a4a16ad6ab9}
+      \strng{bibnamehash}{4965839d1a1cb5d8e94e9a4a16ad6ab9}
+      \strng{authorbibnamehash}{4965839d1a1cb5d8e94e9a4a16ad6ab9}
+      \strng{authornamehash}{4965839d1a1cb5d8e94e9a4a16ad6ab9}
+      \strng{authorfullhash}{4965839d1a1cb5d8e94e9a4a16ad6ab9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The german-speaking IS community sees itself as a methodological pluralist discipline. With respect to recent debates (e.g. on rigor versus relevance) an exact knowledge of its methodological profile becomes increasingly important. This contribution presents the findings of a content analysis of 300 articles published in the journal WIRTSCHAFTSINFORMATIK in the last ten years. As one result, the study identified six major methods of the german-speaking IS community: argumentative, conceptional and formal deductive research, prototyping, case studies and quantitative cross sectional studies. It could also be shown, that the methodological profile continually changed during the last ten years. The article also compares its findings with the current methodological profile of the anglo-american IS community based on a secondary data analysis.}
+      \field{issn}{09376429}
+      \field{journaltitle}{Wirtschaftsinformatik}
+      \field{month}{8}
+      \field{number}{4}
+      \field{title}{{Forschungsmethoden der Wirtschaftsinformatik Eine empirische Untersuchung}}
+      \field{volume}{49}
+      \field{year}{2007}
+      \field{pages}{280\bibrangedash 287}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/s11576-007-0064-z
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/struthof/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Wilde, Hess - 2007 - Forschungsmethoden der Wirtschaftsinformatik Eine empirische Untersuchung.pdf:pdf
+      \endverb
+      \keyw{Comparison,Empirical investigation,Information systems,Longitudinal analysis,Methodology,Research methods}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

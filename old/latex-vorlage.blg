@@ -1,0 +1,9 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'latex-vorlage.blg'
+[146] biber-MSWIN32:340> INFO - === 
+[214] Biber.pm:415> INFO - Reading 'latex-vorlage.bcf'
+[362] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
+[382] Biber.pm:4340> INFO - Processing section 0
+[400] Biber.pm:4531> INFO - Looking for bibtex format file 'C:/Users/struthof/Desktop/github-temp/bibtex.bib' for section 0
+[948] Utils.pm:411> ERROR - Cannot find 'C:/Users/struthof/Desktop/github-temp/bibtex.bib'!
+[948] Biber.pm:132> INFO - ERRORS: 1

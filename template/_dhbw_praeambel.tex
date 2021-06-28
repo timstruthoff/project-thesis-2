@@ -22,8 +22,8 @@
   bottom=20mm,foot=12mm,includefoot
 ]{geometry}                 % Einstellungen für Ränder
 
-\usepackage[ngerman]{babel} % Spracheinstellungen Deutsch
-\usepackage[babel,german=quotes]{csquotes} % deutsche Anf.zeichen
+\usepackage[english]{babel} % Spracheinstellungen Englisch
+\usepackage[babel,english=british]{csquotes} % englische Anf.zeichen
 \usepackage{enumerate}      % anpassbare Nummerier./Aufz.
 \usepackage{graphicx}       % Einbinden von Grafiken
 \usepackage[onehalfspacing]{setspace} % anderthalbzeilig
@@ -52,7 +52,7 @@
 \newcommand{\anhang}[1]{%
   \refstepcounter{anhcnt}
   \setcounter{anhteilcnt}{0}
-  \section*{Anhang \theanhcnt: #1}
+  \section*{Appendix \theanhcnt: #1}
   \addcontentsline{app}{section}{\protect\numberline{Anhang \theanhcnt}#1}\par
 }
 
@@ -78,8 +78,8 @@
 
 % Abbildungs- und Tabellenverzeichnis
 % Bezeichnungen
-\renewcaptionname{ngerman}{\figurename}{Abb.}
-\renewcaptionname{ngerman}{\tablename}{Tab.}
+% \renewcaptionname{ngerman}{\figurename}{Abb.}
+% \renewcaptionname{ngerman}{\tablename}{Tab.}
 % Einrückungen
 \makeatletter
 \renewcommand*{\l@figure}{\@dottedtocline{1}{0em}{2.3em}}

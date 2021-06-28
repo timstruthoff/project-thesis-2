@@ -1,0 +1,44 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix}{IV}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of figures}{V}{section*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of tables}{VI}{section*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Heading on Level\xspace 0 (chapter)}{2}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Heading on Level\xspace 1 (section)}{2}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Heading on Level\xspace 2 (subsection)}{2}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Heading on Level\xspace 3 (subsubsection)}{2}{subsubsection*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Heading on Level\xspace 4 (paragraph)}{3}{paragraph*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Lists}{3}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Example for list\xspace (itemize)}{3}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*itemize)}{3}{subsubsection*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Example for list\xspace (enumerate)}{4}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*enumerate)}{4}{subsubsection*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Example for list\xspace (description)}{4}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*description)}{5}{subsubsection*.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Zitieren}{6}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Zitate in den Text einfügen}{6}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Beispiele}{6}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix}{7}{chapter*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of literature}{9}{section*.20}%

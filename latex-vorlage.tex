@@ -8,7 +8,8 @@
 \input{template/_dhbw_praeambel.tex}
 
 %%% Name der eigenen Literatur-Datenbank (ggf. anpassen) %%%
-\bibliography{includes/literatur-datenbank.bib}
+% \bibliography{C:/Users/struthof/Desktop/github-temp/bibtex/PA2}
+\bibliography{includes/PA2}
 
 \begin{document}
 %%% Deckblatt einbinden %%% 
@@ -33,12 +34,13 @@
 \thispagestyle{kapitelkopfzeile}
 \listoffigures
 \phantomsection
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis} % Abb.verz. ins Inh.verz. aufnehmen
+\addcontentsline{toc}{chapter}{List of figures} % Abb.verz. ins Inh.verz. aufnehmen
+
 
 \clearpage
 \listoftables
 \phantomsection
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}   % Tab.verz. ins Inh.verz. aufnehmen
+\addcontentsline{toc}{chapter}{List of tables}    % Tab.verz. ins Inh.verz. aufnehmen
 \end{spacing}
 
 %%% Umstellung der Seiten-Nummerierung auf 1, 2, 3 ... %%%
@@ -50,18 +52,15 @@
 % und binden Sie diese hier mit \input{includes/dateiname.tex} ein
 
 \input{includes/einleitung.tex}
-\blinddocument
 \input{includes/text_mit_zitaten.tex}
-\input{includes/abbildungen_und_tabellen.tex}
 
 \input{includes/anhang.tex}
-\input{includes/release_notes.tex}
 %%% Ende des eigentlichen Inhalts %%%
 
 
 %%% Quellenverzeichnisse (keine Anpassung nötig) %%%
 \clearpage
-\literaturverzeichnis
+\listofliterature
 %%% Ende Quellenverzeichnisse %%%
 
 
