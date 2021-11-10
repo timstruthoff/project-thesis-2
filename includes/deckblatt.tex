@@ -1,18 +1,18 @@
 % HIER EDITIEREN: 
 % Typ der Arbeit (für Deckblatt und ehrenwörtliche Erklärung)
 % - bitte Zutreffendes auswählen
-%\newcommand{\typeOfThesis}{Project Thesis 2} 
-%\newcommand{\typeOfThesis}{Project Thesis 2} 
-%\newcommand{\typeOfThesis}{Seminararbeit} 
-\newcommand{\typeOfThesis}{Project Thesis 2} 
+%\newcommand{\typMeinerArbeit}{1. Projektarbeit} 
+%\newcommand{\typMeinerArbeit}{2. Projektarbeit} 
+%\newcommand{\typMeinerArbeit}{Seminararbeit} 
+\newcommand{\typMeinerArbeit}{Project Thesis} 
 
 % Thema der Arbeit (für ehrenwörtliche Erklärung, ohne Umbrüche)
 % HIER EDITIEREN: 
-\newcommand{\topicOfThesis}{Title of the thesis}
+\newcommand{\themaMeinerArbeit}{Mein Titel}
 
 % Vorname, Name der Autorin/des Autors (für Titelseite und Metadaten)
 % HIER EDITIEREN:
-\newcommand{\myName}{Tim Struthoff}
+\newcommand{\meinName}{Tim Struthoff}
 
 \thispagestyle{empty}
 
@@ -24,42 +24,42 @@
 {\sffamily
 \LARGE  
 % \Large  % bei sehr langen Titeln ggf. etwas kleinere Schriftart wählen
-\textbf{Title of the thesis}
+\textbf{Titel der Arbeit}
 
 \bigskip
-\textbf{continue Title}
+\textbf{ggf. etwas länger}
 }
 
 
 \vspace{15mm}
 
 % Typ wird automatisch eingefügt (oben festlegen)
-{\Large \typeOfThesis}
+{\Large \typMeinerArbeit}
 
 \vspace{1cm}
 
 % HIER ggf. EDITIEREN
-submitted on \today 
+vorgelegt am \today 
 
 \vspace{15mm}
 
-Faculty of economics
+Fakultät Wirtschaft
 \medskip
 
-Business informatics degree programme
+Studiengang Wirtschaftsinformatik
 \medskip
 
 % HIER EDITIEREN: Kurs eintragen
-Course WII2019I
+Kurs ... 
 
 \vspace{10mm}
 
-by
+von
 
 \vspace{10mm}
 
 % Vorname und Name wird automatisch eingefügt (oben festlegen) 
-{\large\textsc{\myName}}
+{\large\textsc{\meinName}}
 
 \vspace{10mm}
 \end{center}
@@ -68,9 +68,9 @@ by
 
 % HIER EDITIEREN: Name des Unternehmens, Name der Betreuerin/des Betreuers
 \begin{tabular}{ll}
-Internship Supervisor: & DHBW Stuttgart: \\
+Betreuer in der Ausbildungsstätte: & DHBW Stuttgart: \\
 \hspace{0.4\linewidth} & \\
-Hewlett Packard Enterprise & Title, David Lock \\
+$\langle$ Name des Unternehmens $\rangle$ & $\langle$ Titel, Vorname und Nachname $\rangle$ \\
 $\langle$ Titel, Vorname und Nachname der Betreuerin $\rangle$ 
 & $\langle$ der/des wissenschaftlichen Betreuerin/Prüferin $\rangle$ \\
 $\langle$ Funktion der Betreuerin/des Betreuers $\rangle$ \\
@@ -94,6 +94,6 @@ Unterschrift der Betreuerin/des Betreuers \\
 %\end{center}
 
 % Meta-Daten für PDF-Datei basierend auf obigen Angaben
-\hypersetup{pdftitle={\topicOfThesis}}
-\hypersetup{pdfauthor={\myName}}
-\hypersetup{pdfsubject={\typeOfThesis\ DHBW Stuttgart \the\year}}
+\hypersetup{pdftitle={\themaMeinerArbeit}}
+\hypersetup{pdfauthor={\meinName}}
+\hypersetup{pdfsubject={\typMeinerArbeit\ DHBW Stuttgart \the\year}}

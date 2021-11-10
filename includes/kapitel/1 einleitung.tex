@@ -1,0 +1,31 @@
+\chapter{Einleitung}
+
+Die Hewlett Packard Enterprise (HPE) Business Unit Aruba Networks bietet neben anderen Netzwerkgeräten auch Wireless Local Area Network (WLAN) Zugangspunkte bzw. Access Points (APs) an. Mit diesen Zugangspunkten ist es möglich, Endgeräte drahtlos an ein Netzwerk anzubinden. Ein Kunde der Aruba Networks setzt mehrere hundert dieser APs ein. Er verwaltet alle seine IT Geräte, also auch die Aruba APs, mit einer Inventarisierungssoftware. Mit dieser Software sollen nun periodisch Inventardaten zu den APs abgerufen werden. Zur Einsparung von Arbeitskosten soll das Abrufen dieser Daten automatisiert werden. Die Aruba APs werden zentral über den SNMP basierten cloud-managed Service Aruba Central Cloud verwaltet. Die Aruba Central Cloud stellt eine sog. Representational State Transfer (REST) Schnittstelle zur Verfügung, über die Statusdaten der APs abgerufen werden können. Ein JavaScript Programm soll sich nun mit der Aruba REST Schnittstelle verbinden und so die Statusdaten der APs automatisiert abrufen. Somit fungiert das in dieser Arbeit konzipierte Programm als eine Middleware zwischen Aruba Cloud Central und der Inventarisierungssoftware des Kunden. 
+
+\section{Zielsetzung}
+
+Das betriebliche, praktische Ziel dieser Arbeit stellt die Umsetzung eines Prototyps für die zuvor gezeigte Middleware dar. Das theoretische, bzw. akademische Ziel dieser Arbeit liegt in der formalisierten Aufbereitung des Recherche- und Implementierungsprozesses für die Interaktion der Middleware mit der REST API. Konkret sollen folgende \textbf{Forschungsfragen} beantwortet werden:
+
+\begin{enumerate}
+    \item Wie ist der Representational State Transfer Architekturstil von Roy Fielding aufgebaut?
+    \item Wie kann überprüft werden, ob eine API den REST Prinzipien entspricht?
+    \item Entspricht die API der Managementsoftware Aruba Cloud Central den Grundsätzen von Roy Fieldings REST Architektur und werden auch andere Empfehlungen aus Fachliteratur beachtet?
+    \item Kann sich ein JavaScript Programm mit der Aruba Schnittstelle verbinden und mittels REST HTTP Abfragen Informationen über Aruba Geräte in der Netzwerkumgebung des Kunden sammeln?
+\end{enumerate}
+
+Zusammengefasst liegt das Ziel der Arbeit in der Aufbereitung, Analyse und examplarischen Anwendung des REST Architekturstils am Beispiel der Aruba Central API.
+
+\section{Verwandte Arbeiten}
+
+Zu dem REST Architekturstil wurden bereits zahlreiche Arbeiten veröffentlicht. Speziell der Analyse von REST APIs haben sich die folgenden Autoren gewidmet. Bei allen unten aufgeführten Werken lag der Fokus jedoch nicht auf einer speziellen API oder gar einem Endpunkt, sondern in der Analyse einer Vielzahl von APIs.
+
+\begin{itemize}
+    \item \textbf{Renzel et. al} untersuchen in einer Arbeit von 2012 eine Reihe von populären REST Webservices hinsichtlich ihrer Konformität mit Best Practices.
+
+    \item \textbf{Maleshkova et. al} analysieren die Dokumentation von 222 APIs und ziehen Rückschlüsse auf gängige Beschreibungsformen, Ausgabetypen, die Verwendung von API-Parametern sowie weiteren Merkmalen. In einer anderen Arbeit werden von Maleshkova 45 APIs von der Website ProgrammableWeb analysiert. 
+
+    \item \textbf{Neumann et al} sammelt Regeln zum Aufbau von REST APIs und analysiert 500 APIs der Alexa.com 4000 populärsten Websites. Neumann et al referenzieren in der Auswahl der Best Practices Renzel, Maleshkova 2014 und Rodriguez et. al 2016.
+
+    \item In \textbf{Rodriguez et al 2016} wurden 78 GB internet traffic der Telecom Italia analysiert. Die Autoren stellen einige Regeln für REST APIs zusammen und analysieren den Traffic hinsichtlich der Konformität mit diesen Regeln. 
+
+\end{itemize}
