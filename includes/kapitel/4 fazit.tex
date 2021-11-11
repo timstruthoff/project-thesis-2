@@ -1,23 +1,30 @@
-\chapter{Fazit}
+\chapter{Fazit}\label{chapter:fazit}
 
-In dieser Arbeit konnte erfolgreich eine REST API untersucht und verwendet werden. Es wurden zunächst die theoretischen Grundlagen und Ursprünge des REST Architekturstils untersucht. Mit diesen Grundlagen konnten dann Regeln zur Umsetzung von REST Schnittstellen aus Literatur herausgearbeitet und begründet werden.
+In dieser Arbeit konnte erfolgreich ein Regelwerk zur Konzeption von REST APIs aufgestellt, angewendet und validiert werden.
 
-Diese Regeln wurden dann auf die Aruba Central REST Schnittstelle angewendet. Es konnte bewiesen werden, dass die Schnittstelle mit den allgemeinen Regeln übereinstimmt.
+Es wurden zunächst die theoretischen Grundlagen des REST Architekturstils untersucht (Kapitel \ref{chapter:theoretische-betrachtung}). Dabei konnten durch Primärquellen von Fielding ein Grundwortschatz (Kapitel \ref{subsection:definitionen-und-begriffe}), die Grundziele (Kapitel \ref{subsection:grundziele-des-rest}), sowie sieben Randbedingungen der REST Architektur identifiziert werden (Kapitel \ref{subsection:konstruktive-randbedingungen}). Weiter konnte mit Sekundärliteratur von Richardson, Pautasso, Palma, Masse und Tilkov ein Gütemodell als narratives Referenzmodell zur Beurteilung von REST APIs erstellt werden. Auf Basis des Richardson Gütemodells wurden vier Ebenen begründet (Kapitel \ref{section:klassifizierung-von-rest}).  Jede REST API kann in eine der Ebenen eingeordnet werden. Zur Erfüllung einer höheren Ebene muss erst die jeweils darunter liegende erfüllt werden. Eine höhere Ebene bedeutet eine genauere Übereinstimmung mit den Prinzipien des REST Architekturstils. Auf der vierten Ebene entspricht eine API dem REST Architekturstil komplett.
 
-Da die Schnittstelle REST-konform ist, konnte mit einem JavaScript Programm darauf zugegriffen werden. Es konnte ein Prototyp erstellt werden, der es dem Kunden ermöglicht, alle ihm erforderlichen Statusinformationen über die APs abzurufen.
+Im Praxisteil (Kapitel \ref{chapter:praxisteil}) konnten die gewonnenen Erkenntnisse im Rahmen einer betrieblichen Problemstellung angewendet und validiert werden. Für einen Kunden der Business Unit Aruba Networks der Hewlett Packard Enterprise sollte ein Middleware Programm erstellt werden. Diese Middleware sollte sich mit der API der Aruba Access Points verbinden und Informationen von der API abrufen. Diese Informationen sollten einem Inventarisierungsprogramm zur Verfügung gestellt werden.
 
-Das entstandene Programm wurde letztendlich vom Kunden leicht angepasst und in die Inventarisierungssoftware integriert. So kann der Kunde mit dem Arbeitsergebnis automatisiert die Aruba Access Points überwachen. Dieser Prozess würde bei einer manuellen Umsetzung deutlich mehr Arbeitszeit kosten. So konnte mit der Umsetzung und Integration des vorliegenden JavaScript-Programmes ein ökonomischer Nutzen erzielt werden. Nach der erfolgreichen Integration wurde vom Kunde exzellentes Feedback geäußert.
+Die Umsetzung der Middleware wurde in drei Schritten vollzogen: Zunächst wurde die betriebliche Problemstellung erläutert (Kapitel \ref{section:problemstellung-der-betrieblichen-praxis}) und eine Reihe von Anforderungen an die Middleware informell festgehalten (Kapitel \ref{subsection:anforderungen-an-die-middleware}). Als zweiter Schritt zur Umsetzung der Middleware wurde die Machbarkeit der Implementierung der Middleware untersucht. Es wurde mittels des im Theorieteil erstellten Gütemodells untersucht, ob die API von Aruba Central der REST Architektur folgt (Kapitel \ref{section:analyse-des-access-point-monitoring-endpunkte}). Die API wurde in die dritte Ebene des Gütemodells eingeordnet. Für die vierte Ebene fehlten der API Hypermedia Referenzen. Somit sollte eine Umsetzung der Middleware grundsätzlich möglich sein. Jedoch konnte angenommen werden, dass die Struktur der API in der Middleware hinterlegt werden muss. Dies wäre nicht der Fall, wenn die API die vierte Ebene des Gütemodells erfüllt hätte. Diese Erkenntnis wurde in einem dritten Schritt validiert. Hierzu wurde ein Prototyp der Middleware erstellt. In Kapitel \ref{section:Evaluierung-des-Analyseergebnisses-durch-Prototyping} wird die Implementierung des Prototyps schemenhaft beschrieben. Der Prototyp konnte mittels einer verbreiteten Bibliothek zum Versenden von HTTP-Abfragen mit einer vergleichsweise geringen Komplexität umgesetzt werden. Dies spricht für die Erfüllung der dritten Ebene. Jedoch musste die genaue Lokation der verwendeten API Ressource in die Middleware codiert werden. Hätte die API Ebene vier des Gütemodells erfüllt, wäre es möglich, die Lokation der Ressource mittels Hypermedia Referenzen zur Laufzeit zu ermitteln. Somit entspricht die Realität der Umsetzung der Middleware genauestens dem zuvor formulierten Modell. Dies beweist, dass das Gütemodell zur Beurteilung von APIs geeignet ist.
 
-\section{Kritische Evaluierung}
+Zusammenfassend konnte in dieser Arbeit ein narratives Referenzmodell zur Klassifizierung von REST APIs deduktiv aus Primär- und Sekundärliteratur herausgearbeitet werden; dieses Modell konnte in einem betrieblichen Kontext angewendet werden; weiter wurde es konstruktivistisch mit einem Prototyp validiert; es konnte induktiv geschlussfolgert werden, dass die erfolgreiche Anwendung des Modells bei einer API auch auf eine weitere erfolgreiche Anwendung mit anderen APIs schließen lässt.
 
-Wird vom Kunden verwendet
-Einordnung nur heuristik
-Es wurde nur ein Endpunkt analysiert
+\section{Kritische Evaluierung}\label{section:kritische-Evaluierung}
 
-\section{Ausblick}
+Die gewonnenen Forschungsergebnisse werden nun kritisch hinterfragt. Dabei werden sowohl positive als auch negative Aspekte der Arbeit reflektiert dargestellt.
 
-Das, in dieser Arbeit vorgestellte Programm stellt lediglich einen Prototypen dar. Dieser wurde bereits vom Kunden integriert und wird nun verwendet und weiter entwickelt. So wurden alle Ziele der Arbeit erfüllt. 
+Zunächst spricht die erfolgreiche Anwendung im betrieblichen Kontext für diese Arbeit; das entstandene Programm wurde letztendlich vom Kunden leicht angepasst und in die Inventarisierungssoftware integriert. So kann der Kunde mit dem Arbeitsergebnis automatisiert die Aruba Access Points überwachen. Dieser Prozess würde bei einer manuellen Umsetzung deutlich mehr Arbeitszeit kosten. So konnte mit der Umsetzung und Integration des vorliegenden JavaScript-Programmes ein ökonomischer Nutzen erzielt werden. Nach der erfolgreichen Integration wurde vom Kunde exzellentes Feedback geäußert.
 
-Dennoch könnte das Arbeitsergebnis erweitert werden: Das Skript könnte generalisiert werden und als Beispiel in die öffentliche Dokumentation aufgenommen werden. Das würde es anderen Kunden von Aruba ermöglichen die gleiche Problemstellung zu bewältigen.
+Gleichzeitig müssen auch negative Punkte in Betracht gezogen werden: Die Arbeit kann lediglich als eine Heuristik angesehen werden. Zwar ist die Quellenlage in vielerlei Hinsicht eindeutig, jedoch gibt es zum Erstellungszeitpunkt der Arbeit keinen allgemeinen Standard zu dem Aufbau von REST APIs. Weiter wurde das hier vorgestellte Referenzmodell lediglich mit einem Endpunkt einer API validiert. Zwar ist anzunehmen, dass andere Endpunkte der gleichen Firma auf ähnliche Weise strukturiert sind, jedoch konnte dies nicht abschließend validiert werden. 
 
-Weiter existiert bereits eine Programmbibliothek für die Programmiersprache Python, welche es ermöglicht, häufig benutzte Funktionen der Aruba Central Schnittstelle abstrahiert zu bedienen. Eine ähnliche Programmbibliothek könnte auch für die Programmiersprache JavaScript erstellt werden. Das würde es den Kunden von Aruba ermöglichen auch eine Vielzahl von Problemstellungen mittels der Aruba Central Schnittstelle zu bewältigen.
+Zusammenfassend sprechen gerade Aspekte wie der ökonomische Nutzen des Kunden für den Erfolg der Arbeit. Es konnten alle Forschungsziele erfüllt werden und der Kunde empfand das Arbeitsergebnis als sehr zufriedenstellend.
+
+\section{Ausblick}\label{section:ausblick}
+
+Gerade die negativen Punkte der kritischen Evaluierung legen noch Potenzial zur Verbesserung der Arbeit offen:
+
+Zunächst sollte die das hier erstellte Referenzmodell auf weitere Endpunkte von verschiedenen Programmierschnittstellen von verschiedenen Herstellern angewendet werden. Zusätzlich könnte es mit weiteren Prototypen weiter validiert werden.
+
+Das Skript könnte generalisiert werden und als Beispiel in die öffentliche Dokumentation der Aruba Programmierschnittstelle aufgenommen werden. Das würde es anderen Kunden von Aruba ermöglichen, die gleiche Problemstellung zu bewältigen.
+

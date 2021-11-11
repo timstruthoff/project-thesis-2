@@ -1,8 +1,8 @@
-\chapter{Einleitung}
+\chapter{Einleitung}\label{chapter:einleitung}
 
 Die Hewlett Packard Enterprise (HPE) Business Unit Aruba Networks bietet neben anderen Netzwerkgeräten auch Wireless Local Area Network (WLAN) Zugangspunkte bzw. Access Points (APs) an. Mit diesen Zugangspunkten ist es möglich, Endgeräte drahtlos an ein Netzwerk anzubinden\footcite[Vgl. ][]{hewlett_packard_enterprise_development_lp_access_2021}. Ein Kunde der Aruba Networks setzt mehrere hundert dieser APs ein. Er verwaltet alle seine IT Geräte, also auch die Aruba APs, mit einer Inventarisierungssoftware. Mit dieser Software sollen nun periodisch Inventardaten zu den APs abgerufen werden. Zur Einsparung von Arbeitskosten soll das Abrufen dieser Daten automatisiert werden. Die Aruba APs werden zentral über den SNMP basierten cloud-managed Service Aruba Central Cloud verwaltet. Die Aruba Central Cloud stellt eine sog. Representational State Transfer (REST) Schnittstelle zur Verfügung, über die Statusdaten der APs abgerufen werden können. Ein JavaScript Programm soll sich nun mit der Aruba REST Schnittstelle verbinden und so die Statusdaten der APs automatisiert abrufen. Somit fungiert das in dieser Arbeit konzipierte Programm als eine Middleware zwischen Aruba Cloud Central und der Inventarisierungssoftware des Kunden. 
 
-\section{Zielsetzung}
+\section{Zielsetzung}\label{section:zielsetzung}
 
 Das betriebliche, praktische Ziel dieser Arbeit stellt die Umsetzung eines Prototyps für die zuvor gezeigte Middleware dar. Das theoretische, bzw. akademische Ziel dieser Arbeit liegt in der formalisierten Aufbereitung des Recherche- und Implementierungsprozesses für die Interaktion der Middleware mit der REST API. Konkret sollen folgende \textbf{Forschungsfragen} beantwortet werden:
 
@@ -15,7 +15,7 @@ Das betriebliche, praktische Ziel dieser Arbeit stellt die Umsetzung eines Proto
 
 Zusammengefasst liegt das Ziel der Arbeit in der Aufbereitung, Analyse und examplarischen Anwendung des REST Architekturstils am Beispiel der Aruba Central API.
 
-\section{Verwandte Arbeiten}
+\section{Verwandte Arbeiten}\label{section:verwandte-arbeiten}
 
 Zu dem REST Architekturstil wurden bereits zahlreiche Arbeiten veröffentlicht. Speziell der Analyse von REST APIs haben sich die folgenden Autoren gewidmet. Bei allen unten aufgeführten Werken lag der Fokus jedoch nicht auf einer speziellen API oder gar einem Endpunkt, sondern in der Analyse einer Vielzahl von APIs.
 
@@ -30,7 +30,7 @@ Zu dem REST Architekturstil wurden bereits zahlreiche Arbeiten veröffentlicht. 
 
 \end{itemize}
 
-\section{Forschungsbeitrag}
+\section{Forschungsbeitrag}\label{section:forschungsbeitrag}
 
 Der akademische Mehrwert dieser Arbeit begründet sich aus dem Zusammenstellen von konkreten Handlungsrichtlinien zur Implementierung von REST APIs aus vorhandener Literatur und der exemplarischen Anwendung dieser Regeln auf die Aruba Central API. Durch die exemplarische Anwendung dieses heuristischen Regelwerks wird das Regelwerk einerseits validiert und andererseits ein Beispiel gegeben, welches es zukünftigen Anwendern ermöglicht, die Regeln besser anzuwenden. Abschließend wird die Relevanz der Regeln mit einem Prototyp validiert. Zusammengefasst ist es Lesern dieser Arbeit möglich, REST APIs zu klassifizieren und auf Basis dieser Einordnung eine Entscheidung zu der Machbarkeit der Implementierung von Software mit der API zu treffen. Auch ist die Arbeit als firmeninternes Referenzwerk gedacht.
 
@@ -39,6 +39,14 @@ In der Problemdomäne ist bereits eine Vielzahl an Regelwerken zu REST APIs vorh
 Neben der positiven Eingrenzung des Themenbereichs dieser Arbeit muss auch eine negative Abgrenzung stattfinden: Der Fokus dieser Arbeit liegt allein auf dem REST Architekturstil mit der konkreten Anwendung im HTTP Protokoll. Es werden keine alternativen Architekturstile in Betracht gezogen. Auch können die, in dieser Arbeit gewonnenen Ergebnisse nicht als absolute, unlimitiert gültige Wahrheit gesehen werden. Die Umsetzung des REST Stils entwickelt sich dynamisch und ist weitgehend frei von regulatorischer Kontrolle. So können die hier erlangten Ergebnisse lediglich als eine Heuristik auf Basis von aktueller, verbreiteter Literatur und etablierter Unternehmenspraxis gesehen werden. Eine weitere Einschränkung der Arbeit liegt in der Analyse von lediglich einem Endpunkt der Aruba Central API. Zwar ist anzunehmen, dass alle anderen Endpunkte der API ähnlich zu dem hier analysierten sind, jedoch kann dies aufgrund des beschränkten Umfangs der Arbeit nicht validiert werden. Zusätzlich liegt der Fokus bei der Umsetzung des Prototyps nicht auf konkreten Implementierungsdetails sondern auf dem Beweis der Machbarkeit einer Integration mit der Aruba Central API.
 
 
-\section{Aufbau der Arbeit}
+\section{Aufbau der Arbeit}\label{section:aufbau-der-arbeit}
 
-Zur Beantwortung der ersten Forschungsfrage nach dem Aufbau einer REST API wird in Kapitel vorhandene Fachliteratur zusammengefasst und abstrahiert dargestellt. Weiter wird in Kapitel ein Regelwerk geschaffen und so die zweite Forschungsfrage beantwortet. Dieses Referenzmodell wird in Kapitel zur Beantwortung der dritten Forschungsfrage verwendet und so gleichzeitig validiert. Zusätzlich wird das Modell in Kapitel durch die Implementierung eines Prototyps überprüft. In Kapitel wird ein abschließendes Fazit sowie ein Ausblick auf weitere mögliche Entwicklungen der Arbeit gegeben.
+Zunächst wird das Thema in Kapitel \ref{chapter:theoretische-betrachtung} aus theoretischer Sicht beleuchtet. Zur Beantwortung der ersten Forschungsfrage nach dem Aufbau einer REST API wird in Kapitel \ref{section:quellendiskussion} vorhandene Fachliteratur ausgewählt und die Auswahl begründet. In Kapitel \ref{subsection:definitionen-und-begriffe} wird ein Grundwortschatz aus Fachbegriffen vorgestellt. Auf diesen Wortschatz wird in der weiteren Arbeit zurückgegriffen. Weiter wird in Kapitel \ref{subsection:der-rest-architekturstil} der REST Architekturstil in seiner Ausführung von Fielding erläutert. Zur späteren Klassifizierung der Aruba Central REST API wird in Kapitel \ref{section:klassifizierung-von-rest} ein Gütemodell von Richardson um weitere Quellen erweitert und so ein Referenzmodell geschaffen.
+
+Im Praxisteil (Kapitel \ref{chapter:praxisteil}) der Arbeit werden die erlangten Erkenntnisse angewendet und so validiert. Zunächst wird die betriebliche Problemstellung erläutert (Kapitel \ref{section:problemstellung-der-betrieblichen-praxis}). Dann wird der Aruba Central Monitoring Endpunkt analysiert (Kapitel \ref{section:analyse-des-access-point-monitoring-endpunkte}) und in das in Kapitel \ref{section:klassifizierung-von-rest} erstellte Referenzmodell eingeordnet. Diese Einordnung soll eine grobe Einschätzung der Machbarkeit des Middleware Programmes ermöglichen. Das Analyseergebnis wird in Kapitel \ref{section:Evaluierung-des-Analyseergebnisses-durch-Prototyping} mittels eines Prototyps validiert: Wurde die API in Kapitel \ref{section:analyse-des-access-point-monitoring-endpunkte} als RESTful eingestuft, sollte die Umsetzung des Prototyps möglich sein.
+
+Im Fazit der Arbeit werden die erlangten Forschungsergebnisse zusammengefasst (Kapitel \ref{chapter:fazit}) und kritisch hinterfragt (Kapitel \ref{section:kritische-Evaluierung}). Abschließend wird in Kapitel \ref{section:ausblick} ein Ausblick auf weitere Entwicklungen der Arbeit gegeben.
+
+
+
+
