@@ -10,24 +10,24 @@
 \clearpage
 \spezialkopfzeile{Anhang} % damit in der Kopfzeile das Wort "Anhang" angezeigt wird
 
-\anhang{So funktioniert's}
+\anhang{Vollständige HTTP Abfrage}\label{anhang:http-abfrage}
 
-\lstset{language=TeX, % hervorzuhebende Keywords definieren
-  morekeywords={anhang, anhangteil}
+Dies ist das komplette Resultat der Abfrage des Monitoring Endpunktes mit dem HTTP-Client Postman. Die MAC-Adressen und öffentlichen IP-Adressen der Geräte sind vertrauliche Informationen und wurde deswegen mit [REMOVED] ersetzt.
+
+\lstset{
+    breaklines=true,
+    firstnumber=1 
 }
+\lstinputlisting{includes/anhang/http-abfrage.txt}
 
 
-Um den  der Zitierrichtlinien nachzukommen, wird das Paket \verb|tocloft| verwendet. Jeder Anhang wird mit dem (neu definierten) Befehl \lstinline|\anhang{Bezeichnung}| begonnen, der insbesondere dafür sorgt, dass ein Eintrag im Anhangsverzeichnis erzeugt wird. Manchmal ist es wünschenswert, auch einen Anhang noch weiter zu unterteilen. Hierfür wurde der Befehl \lstinline|\anhangteil{Bezeichnung}| definiert.
+\anhang{Middleware Sourcecode}\label{anhang:sourcecode}
 
-In~\ref{anhang:abbildung} finden Sie eine bekannte Abbildung und etwas Source Code in~\ref{anhang:sourcecode}. 
+Dies ist der vollständige Code der Middleware. Neben diesem Code ist noch die frei verfügbare Bibliothek Axios nötig, um die Middleware auszuführen.
 
-\anhangteil{Wieder mal eine Abbildung}\label{anhang:abbildung}
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.9\linewidth]{graphics/dhbw.png}
-\caption{Mal wieder das DHBW-Logo.}
-\end{figure}
-
-\anhangteil{Etwas Source Code}\label{anhang:sourcecode}
-\lstinputlisting{includes/HelloWorld.java}
+\lstset{
+    breaklines=true,
+    firstnumber=1 
+}
+\lstinputlisting{includes/anhang/sourcecode.js}
 

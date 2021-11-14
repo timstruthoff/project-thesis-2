@@ -1,0 +1,237 @@
+GET /monitoring/v2/aps HTTP/1.1
+Authorization: Bearer [REMOVED]
+User-Agent: PostmanRuntime/7.28.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 08406103-5ca6-4c12-8712-c72681074e53
+Host: internal-apigw.central.arubanetworks.com
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: csrftoken=[REMOVED]; session=[REMOVED]
+ 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-RateLimit-Limit-day: 1000
+X-RateLimit-Remaining-day: 999
+Date: Sat, 31 Jul 2021 11:36:35 GMT
+Vary: Accept-Encoding
+access-control-allow-origin: *
+cache-control: no-cache, no-store, must-revalidate, private
+pragma: no-cache
+set-cookie: session=[REMOVED]; Secure; HttpOnly; Path=/
+X-Frame-Options: SAMEORIGIN
+X-Request-Start: t=1627731395.434
+X-XSS-Protection: 1; mode=block
+Content-Encoding: gzip
+X-Kong-Upstream-Latency: 406
+X-Kong-Proxy-Latency: 5
+Via: kong/0.14.1
+ 
+{
+	"aps": [
+{
+"ap_deployment_mode": "IAP",
+"ap_group": null,
+"cluster_id": "",
+"controller_name": "",
+"firmware_version": "6.5.4.15_73677",
+"gateway_cluster_id": "",
+"gateway_cluster_name": "",
+"group_name": "dw_AP-Group",
+"ip_address": "192.168.0.14",
+"labels": [],
+"last_modified": 1627371453,
+"macaddr": "[REMOVED]",
+"mesh_role": "Portal",
+"model": "205",
+"name": "ctrl-dw01",
+"notes": null,
+"public_ip_address": "95.91.239.249",
+"radios": [
+{
+"band": 1,
+"index": 0,
+"macaddr": "94:b4:0f:37:55:90",
+"status": "Up"
+},
+{
+"band": 0,
+"index": 1,
+"macaddr": "94:b4:0f:37:55:80",
+"status": "Up"
+}
+],
+"serial": "CM0187391",
+"site": "Wenninger",
+"status": "Up",
+"subnet_mask": "255.255.255.0",
+"swarm_id": "d13fd05f01a8f34069f6d051cfddc59fe9c74eca70fc649889",
+"swarm_master": true,
+"swarm_name": "ctrl-vc-wenni"
+},
+{
+"ap_deployment_mode": "IAP",
+"ap_group": "None",
+"cluster_id": "",
+"controller_name": "",
+"firmware_version": "6.5.4.15_73677",
+"gateway_cluster_id": "",
+"gateway_cluster_name": "",
+"group_name": "dw_AP-Group",
+"ip_address": "192.168.0.10",
+"labels": [],
+"last_modified": 1627371453,
+"macaddr": "94:b4:0f:cb:75:d0",
+"mesh_role": "Point",
+"model": "205",
+"name": "ctrl-dw02",
+"notes": null,
+"public_ip_address": "95.91.239.249",
+"radios": [
+{
+"band": 1,
+"index": 0,
+"macaddr": "94:b4:0f:37:5d:10",
+"status": "Up"
+},
+{
+"band": 0,
+"index": 1,
+"macaddr": "94:b4:0f:37:5d:00",
+"status": "Up"
+}
+],
+"serial": "CM0187451",
+"site": "Wenninger",
+"status": "Up",
+"subnet_mask": "255.255.255.0",
+"swarm_id": "d13fd05f01a8f34069f6d051cfddc59fe9c74eca70fc649889",
+"swarm_master": false,
+"swarm_name": "ctrl-vc-wenni"
+},
+{
+"ap_deployment_mode": "IAP",
+"ap_group": "None",
+"cluster_id": "",
+"controller_name": "",
+"firmware_version": "8.6.0.4_74969",
+"gateway_cluster_id": "",
+"gateway_cluster_name": "",
+"group_name": "jf_AP-Group",
+"ip_address": "192.168.170.108",
+"labels": [],
+"last_modified": 1624145812,
+"macaddr": "34:fc:b9:c6:7c:60",
+"mesh_role": "Unknown",
+"model": "315",
+"name": "ctrl-ap21",
+"notes": null,
+"public_ip_address": "62.224.222.55",
+"radios": [
+{
+"band": 1,
+"index": 0,
+"macaddr": "34:fc:b9:e7:c6:10",
+"status": "Up"
+},
+{
+"band": 0,
+"index": 1,
+"macaddr": "34:fc:b9:e7:c6:00",
+"status": "Up"
+}
+],
+"serial": "CNCGJ0T2ML",
+"site": "Homeoffice",
+"status": "Up",
+"subnet_mask": "255.255.255.0",
+"swarm_id": "4d2a9614011bbe96a94db9fb20176dc6175e7b0d9a2ec1cd90",
+"swarm_master": true,
+"swarm_name": "ctrl-jofi-vc"
+},
+{
+"ap_deployment_mode": "IAP",
+"ap_group": "None",
+"cluster_id": "",
+"controller_name": "",
+"firmware_version": "8.6.0.4_74969",
+"gateway_cluster_id": "",
+"gateway_cluster_name": "",
+"group_name": "jf_AP-Group",
+"ip_address": "192.168.170.102",
+"labels": [],
+"last_modified": 1624145872,
+"macaddr": "34:fc:b9:cb:84:72",
+"mesh_role": "Unknown",
+"model": "305",
+"name": "ctrl-ap01",
+"notes": null,
+"public_ip_address": "62.224.222.55",
+"radios": [
+{
+"band": 1,
+"index": 0,
+"macaddr": "34:fc:b9:38:47:30",
+"status": "Up"
+},
+{
+"band": 0,
+"index": 1,
+"macaddr": "34:fc:b9:38:47:20",
+"status": "Up"
+}
+],
+"serial": "CNCWJSS28S",
+"site": "Homeoffice",
+"status": "Up",
+"subnet_mask": "255.255.255.0",
+"swarm_id": "4d2a9614011bbe96a94db9fb20176dc6175e7b0d9a2ec1cd90",
+"swarm_master": false,
+"swarm_name": "ctrl-jofi-vc"
+},
+{
+"ap_deployment_mode": "IAP",
+"ap_group": "None",
+"cluster_id": "",
+"controller_name": "",
+"down_reason": "cold_hw_reset",
+"firmware_version": "8.6.0.4_74969",
+"gateway_cluster_id": "",
+"gateway_cluster_name": "",
+"group_name": "jf_AP-Group",
+"ip_address": "192.168.170.107",
+"labels": [],
+"last_modified": 1612640211,
+"macaddr": "34:fc:b9:cb:84:78",
+"mesh_role": "Unknown",
+"model": "305",
+"name": "ctrl-ap02",
+"notes": null,
+"public_ip_address": "62.224.222.55",
+"radios": [
+{
+"band": 1,
+"index": 0,
+"macaddr": "34:fc:b9:38:47:90",
+"status": "Down"
+},
+{
+"band": 0,
+"index": 1,
+"macaddr": "[REMOVED]",
+"status": "Down"
+}
+],
+"serial": "CNCWJSS28W",
+"site": "Homeoffice",
+"status": "Down",
+"subnet_mask": "255.255.255.0",
+"swarm_id": "4d2a9614011bbe96a94db9fb20176dc6175e7b0d9a2ec1cd90",
+"swarm_master": false,
+"swarm_name": "ctrl-jofi-vc"
+}
+],
+"count": 5
+}

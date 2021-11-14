@@ -10,7 +10,7 @@ Im Rahmen dieser Arbeit soll für einen Kunden der Aruba Networks eine Middlewar
 
 Der Kunde verwendet in seiner Netzwerkumgebung WLAN APs der Aruba Networks. Diese APs stellen über das Internet eine Verbindung zu der zentralen Verwaltungs- und Orchestrationseinheit Aruba Central her. Aruba Central ist ein Softwareprodukt der Aruba Networks und bietet die Möglichkeit, eine große Anzahl an APs und anderer Netzwerkgeräte in einem einzigen visuellen Benutzerinterface zu verwalten. Dabei können die Geräte weltweit an verschiedenen Standorten verteilt sein\footcite[S. 1]{hewlett_packard_enterprise_development_lp_aruba_2021-2}. Aruba Central kann sowohl vor Ort (on-premise) installiert werden, als auch aus zentralen Rechenzentren bereitgestellt werden\footcite[S. 6]{hewlett_packard_enterprise_development_lp_aruba_2021-2}. Wichtige Features der Software sind u. a. die Möglichkeit, entferntes Netzwerkequipment über das Internet  zu provisionieren, mit künstlicher Intelligenz Fehler zu finden und das Netzwerk aktiv zu überwachen\footcite[S. 1]{hewlett_packard_enterprise_development_lp_aruba_2021-2}. Vor allem das Überwachen, sprich Monitoring, ist in dieser Arbeit von Relevanz. Viele der Funktionen von Aruba Central lassen sich auch mittels einer Programmierschnittstelle bedienen\footcite[S. 6]{hewlett_packard_enterprise_development_lp_aruba_2021-2}. Für die Entwicklung der Middleware soll diese Schnittstelle verwendet werden. Die Schnittstelle wird als REST Schnittstelle bereitgestellt\footcite[S. 6]{hewlett_packard_enterprise_development_lp_aruba_2021-2}.
 
-\subsection{Integration der Middleware in den Ivanti Endpoint Manager}\label{chapter:einleitung}
+\subsection{Integration der Middleware in den Ivanti Endpoint Manager}\label{chapter:integration-der-middleware-in-den-ivanti-endpoint-manager}
 
 Ein Kunde möchte die Inventardaten der APs in die Inventarisierungssoftware Ivanti Endpoint Manager importieren. Der Ivanti Endpoint Manager dient dem Inventarisieren, Verwalten, Schützen und Warten von IT Geräten\footcite[S. 3]{ivanti_inc_transparenz_2021}. 
 
@@ -94,7 +94,7 @@ Zusammengefasst konnten in der HTTP Abfrage eine korrekte Request Methode, eine 
 Auf die HTTP-Abfrage des Endpunktes sollte der Monitoring Endpunkt die Inventardaten der WLAN-APs zurückgeben. Der Rückgabewert der Abfrage ist im folgenden Code zu sehen.
 
 \small
-\lstset{firstnumber=12}
+\lstset{firstnumber=1}
 \begin{lstlisting}
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -148,9 +148,13 @@ Nach dem HTTP Protokoll gehören die Header Content-Type (Zeile 13) und Content-
 
 In den Zeilen 18 und 21 werden der Date und der cache-control Header gesetzt (im folgenden Code zu sehen).
 
-\lstset{firstnumber=13}
+\lstset{firstnumber=18}
 \begin{lstlisting}
 Date: Sat, 31 Jul 2021 11:36:35 GMT
+\end{lstlisting}
+
+\lstset{firstnumber=21}
+\begin{lstlisting}
 cache-control: no-cache, no-store, must-revalidate, private
 \end{lstlisting}
 
@@ -176,7 +180,7 @@ Mittels einer argumentativ deduktiven Analyse konnte festgestellt werden, dass d
 
 Das Middleware Programm besteht im Wesentlichen aus HTTP Anfragen an die Aruba Cloud Central REST API. HTTP Anfragen sind in ihrer Natur asynchron. JavaScript ermöglicht es ebenfalls, in einer asynchronen Art zu programmieren. Demnach liegt es auch auf der Hand, das Inventarisierungsprogramm asynchron zu gestalten. In JavaScript stehen eine Reihe von Mechanismen zur asynchronen Programmierung zur Verfügung. Ein sehr verbreiteter Ansatz ist der der Promises\footcite[S. 11]{parker_javascript_2015}. Dieser Ansatz wird auch in dem Skript verfolgt. Speziell werden in der Anwendung verschiedene HTTP Anfragen in einer sog. Promise Chain der Reihe nach abgearbeitet. Auch die verwendete Bibliothek Axios unterstützt das Arbeiten mit einer Promise Chain\footcite{zabriskie_axios_2021}. 
 
-Zunächst wird der Authentifizierungsendpunkt aufgerufen (Zeile 12 bis 20). Dieser Aufruf gibt ein Promise zurück\footcite{zabriskie_axios_2021}. In einem nächsten Funktionsaufruf werden die zuvor abgerufenen Authentifizierungsinformationen abgespeichert (Zeile 21 bis 41). Die komplette Authentifizierungsprozedur wird hier nicht weiter erklärt, da sie unabhängig von dem analysierten Endpunkt geschieht. Mit den Authentifizierungsinformationen werden dann die Inventardaten der Access Points abgerufen (Zeile 42 bis 51, Kapitel \ref{subsection:abrufen-der-Inventardaten}). Zuletzt werden die gesammelten Daten ausgegeben (Zeile 52 bis 62, Kapitel \ref{subsection:ausgeben-der-Inventardaten}). In Zeile 63 bis 65 wird über die Catch Methode ein Error Handler an alle Promises gehängt\footcite[S. 772]{ecma_international_ecmascript_2021}. Sollte einer der zuvor genannten Schritte mit einer Exception abgebrochen werden, wird die Promise Chain abgebrochen und der Fehler wird mit dem catch Block behandelt\footcite{mozilla_foundation_using_2021}.
+Zunächst wird der Authentifizierungsendpunkt aufgerufen (Zeile 12 bis 20). Dieser Aufruf gibt ein Promise zurück\footcite{zabriskie_axios_2021}. In einem nächsten Funktionsaufruf werden die zuvor abgerufenen Authentifizierungsinformationen abgespeichert (Zeile 21 bis 41). Das komplette Authentifizierungsverfahren wird hier nicht weiter erklärt, da sie unabhängig von dem analysierten Endpunkt geschieht. Mit den Authentifizierungsinformationen werden dann die Inventardaten der Access Points abgerufen (Zeile 42 bis 51, Kapitel \ref{subsection:abrufen-der-Inventardaten}). Zuletzt werden die gesammelten Daten ausgegeben (Zeile 52 bis 62, Kapitel \ref{subsection:ausgeben-der-Inventardaten}). In Zeile 63 bis 65 wird über die Catch Methode ein Error Handler an alle Promises gehängt\footcite[S. 772]{ecma_international_ecmascript_2021}. Sollte einer der zuvor genannten Schritte mit einer Exception abgebrochen werden, wird die Promise Chain abgebrochen und der Fehler wird mit dem catch Block behandelt\footcite{mozilla_foundation_using_2021}.
 
 \subsection{Umgebungsvariablen}\label{subsection:Umgebungsvariablen}
 
@@ -200,9 +204,12 @@ Für die Authentifizierung mit der API sind Zugangsdaten erforderlich. Die Zugan
 
 \subsection{Abrufen der Inventardaten}\label{subsection:abrufen-der-Inventardaten}
 
-Nach der erfolgreichen Authentifizierung mit der Aruba API können die Inventardaten abgerufen werden (Zeile 42 bis 51). Alle vom Kunden geforderten Daten lassen sich mittels eines API Endpunktes abrufen. Dieser Endpunkt wurde bereits in beschrieben. 
+Nach der erfolgreichen Authentifizierung mit der Aruba API können die Inventardaten abgerufen werden (Zeile 42 bis 51). Alle vom Kunden geforderten Daten lassen sich mittels eines API Endpunktes abrufen. Dieser Endpunkt wurde bereits in Kapitel \ref{section:analyse-des-access-point-monitoring-endpunkte} beschrieben. 
 
-\lstset{firstnumber=13}
+\lstset{
+    firstnumber=45,
+    breaklines=true
+}
 \begin{lstlisting}
 return axios.get(process.env.ARUBA_CENTRAL_API_ROOT_PATH + 'monitoring/v2/aps',
 {

@@ -8,8 +8,6 @@ Der REST Architekturstil wurde von Roy Fielding erfunden und zuerst in Fieldings
 
 Die Arbeit von Fielding befasst sich nicht mit der Umsetzung der Regel des REST Stils und auch nicht mit der Priorisierung dieser Regeln\footcite[Vgl. ][S. XVI]{richardson_restful_2007}. Diese beiden Aspekte werden jedoch für diese Arbeit benötigt. Für diese Informationen wird auf Sekundärliteratur zurückgegriffen. 
 
-\subsection{Quellen zur konkreten Umsetzung des REST Architekturstils}\label{subsection:qullen-zur-konkreten-umsetzung}
-
 \begin{figure}[htb]
 \centering
 \includegraphics[width=\textwidth]{graphics/quelleneinordnung.png}
@@ -22,19 +20,15 @@ Es wurde eine Vielzahl von Quellen untersucht. Diese Quellen sind in Abbildung \
 
 Die Kreise stellen die einzelnen Quellen dar. Ein Pfeil von Quelle A zu Quelle B symbolisiert eine Referenz von Quelle A auf Quelle B. Alle Quellen beziehen sich zusätzlich zu den hier aufgeführten Referenzen auf Roy Fieldings Doktorarbeit. Zur weiteren Synthese der Quellen wurde versucht, die Qualität der Quellen zu beurteilen. Alle als qualitativ beurteilten Quellen sind in der Abbildung in grün dargestellt. Diese werden in der folgenden Arbeit hauptsächlich verwendet. Die Beurteilung der Quellen wird im Folgenden begründet:
 
-Zunächst werden die Quellen von \emph{Richardson} von 2007, 2008 und 2013 betrachtet: Alle Quellen werden vielfach zitiert. Da andere Autoren ebenfalls auf die Auswahl hochwertiger Quellen achten sollten, lässt sich annehmen, dass eine viel zitierte Quelle von hoher Qualität ist. Gerade das Lehrbuch \cite{richardson_restful_2007} wurde besonders oft zitiert. Zusätzlich sind Richardsons Werke bei dem 1978 gegründeten, anerkannten Verleger O’Reilly publiziert\footcite[Vgl. ][S. 1]{levy_trend_2005}. Weitergehend ist Leonard Richardson der Autor der populären  Bibliothek Beautiful Soup zum Parsen von XML und HTML Dokumenten \footnote{Vgl. \cite{richardson_beautifulsoup4_2021} und \cite{richardson_code_2021}} und arbeitete bereits als Software Architekt bei der New York Public Library, sowie bei Canonical, der Firma hinter Ubuntu\footcite[Vgl. ][]{richardson_leonard_2021}. Insgesamt wurden seine Werke über 1500 mal zitiert\footcite[Vgl. ][]{richardson_l_2021}.
+Zunächst werden die Quellen von \emph{Leonard Richardson} von 2007, 2008 und 2013 betrachtet: Alle Quellen werden vielfach zitiert. Da andere Autoren ebenfalls auf die Auswahl hochwertiger Quellen achten sollten, lässt sich annehmen, dass eine viel zitierte Quelle von hoher Qualität ist. Gerade das Lehrbuch \cite{richardson_restful_2007} wurde besonders oft zitiert. Zusätzlich sind Richardsons Werke bei dem 1978 gegründeten, anerkannten Verleger O’Reilly publiziert\footcite[Vgl. ][S. 1]{levy_trend_2005}. Weitergehend ist Leonard Richardson der Autor der populären  Bibliothek Beautiful Soup zum Parsen von XML und HTML Dokumenten \footnote{Vgl. \cite{richardson_beautifulsoup4_2021} und \cite{richardson_code_2021}} und arbeitete bereits als Software Architekt bei der New York Public Library, sowie bei Canonical, der Firma hinter Ubuntu\footcite[Vgl. ][]{richardson_leonard_2021}. Insgesamt wurden seine Werke über 1500 mal zitiert\footcite[Vgl. ][]{richardson_l_2021}.
 
-Auch die Werke von Pautasso wurden vielfach zitiert\footcite[Vgl. ][]{pautasso_cesare_2021}. Cesare Pautasso is full professor at the Software Institute of the Faculty of Informatics at the University of Lugano, Switzerland. Previously he was a researcher at the IBM Zurich Research Lab (2007) and a senior researcher at ETH Zurich (2004-2007). He completed his graduate studies with a Ph.D. from ETH Zurich in 2004 and his undergraduate studies at Politecnico di Milano, Italy with a Computer Science Engineering Degree (cum laude) in 2000\footcite[Vgl. ][]{pautasso_prof_2021}.
+Auch die Werke von \emph{Cesare Pautasso} wurden vielfach zitiert\footcite[Vgl. ][]{pautasso_cesare_2021}. Cesare Pautasso ist Professor an der Fakultät für Informatik an der Universität Lugano, Schweiz. Zuvor war er Forscher am IBM Zurich Research Lab und Senior Researcher an der ETH Zürich\footcite[Vgl. ][]{pautasso_prof_2021}.
 
-Francis Palma wird ebenfalls als ein Spezialist auf seinem Fachgebiet angesehen und weißt einen h-Index von 12 auf\footcite[Vgl. ][]{palma_francis_2021}. Seine Werke werden unter kritischer Betrachtung ebenfalls als Quellen aufgenommen.
+\emph{Francis Palma} wird ebenfalls als ein Spezialist auf seinem Fachgebiet angesehen und weißt einen h-Index von 12 auf\footcite[Vgl. ][]{palma_francis_2021}. Seine Werke werden unter kritischer Betrachtung ebenfalls als Quellen aufgenommen.
 
-Ein Lehrbuch von Mark Masse wird auch als Quelle aufgenommen. Masse verfügt über fünfzehn Jahre Erfahrung in Technik, Management und Architektur der Informatik und entwarf das Content Management System (CMS) von allen Websites der Walt Disney Company\footcite[Vgl. ][]{masse_mark_2021}. Das vorliegende Lehrbuch ist jedoch teils subjektiv gehalten und sollte somit besonders kritisch hinterfragt werden.
+Ein Lehrbuch von \emph{Mark Masse} wird auch als Quelle aufgenommen. Masse verfügt über fünfzehn Jahre Erfahrung in Technik, Management und Architektur der Informatik und entwarf das Content Management System (CMS) von allen Websites der Walt Disney Company\footcite[Vgl. ][]{masse_mark_2021}. Das vorliegende Lehrbuch ist jedoch teils subjektiv gehalten und sollte somit besonders kritisch hinterfragt werden.
 
-Eine weitere betrachtete Quelle ist ein Lehrbuch von Stefan Tilkov. Das Lehrbuch wurde aufgrund einer mündlichen Empfehlung der Bibliothek der Dualen Hochschule Baden-Württemberg (DHBW) sowie der Universität Stuttgart ausgewählt. Auch ist Stefan Tilkov Berater bei INNOQ, Autor zahlreicher Fachartikel und Referent auf zahlreichen internationalen Konferenzen\footcite[Vgl. ][]{tilkov_stefan_2021}. 
-
-\subsection{Quellen zur Priorisierung der Rest Regeln}\label{subsection:quellen-zur-priorisierung}
-
-Johanna Barzen und Sebastian Kotstein erstellten eine Umfrage unter Experten, welche REST Regeln am wichtigsten sind\footcite[Vgl. ][]{barzen_which_2021}. Die Meinungen dieser Experten werden auch in der Priorisierung der REST Regeln in dieser Arbeit berücksichtigt.
+Eine weitere betrachtete Quelle ist ein Lehrbuch von \emph{Stefan Tilkov}. Das Lehrbuch wurde aufgrund einer mündlichen Empfehlung der Bibliothek der Dualen Hochschule Baden-Württemberg (DHBW) sowie der Universität Stuttgart ausgewählt. Auch ist Stefan Tilkov Berater bei der innoQ Deutschland GmbH, Autor zahlreicher Fachartikel und Referent auf zahlreichen internationalen Konferenzen\footcite[Vgl. ][]{tilkov_stefan_2021}. 
 
 \section{Definitionen und Begriffe}\label{subsection:definitionen-und-begriffe}
 
