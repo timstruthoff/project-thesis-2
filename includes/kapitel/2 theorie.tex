@@ -121,13 +121,20 @@ Nach dem HTTP Protokoll sollen einzelne Ressourcen mit URLs identifiziert werden
 \begin{enumerate}
     \item Das Schema. In der Regel wird hier das Protokoll, wie z.B. https oder ftp angegeben.
     \item Ein Doppelpunkt gefolgt von zwei Schrägstrichen (://)
-    \item Die Autorität. Dies ist in der Regel der Domainname des Server, sowie der Port.
+    \item Die Autorität. Dies ist in der Regel der Domainname des Server sowie der Port.
     \item Der Pfad zu der angefragten Ressource auf dem Server. Wird kein Pfad angegeben, wird automatisch der Root Pfad angesprochen.
     \item Optional: Ein oder mehrere Query Parameter
     \item Optional: Ein Fragment
 \end{enumerate}
 
-Abbildung .. zeigt Beispielhaft den Aufbau einer URL\footcite[Vgl. ][S. 16]{berners-lee_uniform_2005-1}. 
+Abbildung \ref{abb:AufbauURL} zeigt Beispielhaft den Aufbau einer URL. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=12cm]{graphics/aufbau-url.png}
+\caption[aufbau-einer-url]{Aufbau einer URL\footcite[Vgl. ][S. 16]{berners-lee_uniform_2005-1}.}
+\label{abb:AufbauURL}
+\end{figure}
 
 Gemäß des Standards symbolisiert ein URI einen hierarchischen, gerichteter Graph \footnote{Vgl. \cite[S. 118]{richardson_restful_2007} und \cite[S. 175]{palma_semantic_2017}}. Das folgende Beispiel aus Richardson 2007 verdeutlicht diesen Zusammenhang; Paris ist Teil von Frankreich, Frankreich Teil der Erde\footcite[Vgl. ][S. 118]{richardson_restful_2007}.
 
